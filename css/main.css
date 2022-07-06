@@ -20,3 +20,7 @@ body {
   border-radius: 50%;
   outline: 5px solid black;
 }
+#markers {
+  display: flex;
+  justify-content: center;
+}

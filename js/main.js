@@ -6,8 +6,8 @@ const PLAYERS_COLORS = {
 };
 /*----- app's state (variables) -----*/
 let board;
-let winner; // null = game in play    1/-1 has won 'T'
-let turn; //  1/-1
+let winner = null; // null = game in play    1/-1 has won 'T'
+let turn = 1; //  1/-1
 let gameStatus;
 
 /*----- cached element references -----*/
@@ -35,6 +35,7 @@ function init() {
   turn = 1;
   gameStatus = null;
   render();
+  winner = null;
 }
 function render() {
   board.forEach(function (colArr, colIdx) {
@@ -46,11 +47,32 @@ function render() {
     });
   });
 }
+
 function handleMove(evt) {
   console.log(evt.target, "handleMove");
-  let col = evt.target.id[1];
-  let row = evt.target.id[3];
-  board[col][row] = turn;
+  let colIdx = evt.target.id[1];
+  let rowIdx = evt.target.id[3];
+  board[colIdx][rowIdx] = turn;
+  winner = checkWin(colIdx, rowIdx);
+  console.log(winner);
   turn = turn * -1;
+  //   gameStatus = getGameStatus()
   render();
 }
+function checkWin(colIdx, rowIdx) {
+  const player = board[colIdx][rowIdx];
+  return verWin(colIdx, rowIdx);
+}
+
+function verWin(colIdx, rowIdx) {
+  const player = board[colIdx][rowIdx];
+  let count = 1;
+  let idx = colIdx + 1;
+  while (idx < board.length && board[idx][rowIdx] === player) {
+    count++;
+    idx++;
+  }
+  return count >= 2 ? (winner = true) : null;
+}
+
+// function gameStatus() {
