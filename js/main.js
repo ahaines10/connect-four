@@ -12,9 +12,10 @@ let gameStatus;
 
 /*----- cached element references -----*/
 const boardEl = document.getElementById("board");
+const buttonEls = document.getElementById("markers");
 /*----- event listeners -----*/
-boardEl.addEventListener("click", handleMove);
-
+// boardEl.addEventListener("click", handleMove);
+buttonEls.addEventListener("click", handleMove);
 /*----- functions -----*/
 //if player clicks on row 1 player will have token of red
 //if player 2 click on row player 2 will have token of blue
@@ -42,37 +43,51 @@ function render() {
     colArr.forEach(function (cellVal, rowIdx) {
       //select the div for colidx and rowidx
       let currPos = document.getElementById(`c${colIdx}r${rowIdx}`);
-      console.log(currPos, colIdx, rowIdx);
       currPos.style.backgroundColor = PLAYERS_COLORS[cellVal];
     });
   });
 }
 
 function handleMove(evt) {
-  console.log(evt.target, "handleMove");
+  if (evt.target.id === "markers" || winner) return;
   let colIdx = evt.target.id[1];
-  let rowIdx = evt.target.id[3];
+  let rowIdx = board[colIdx].indexOf(0);
   board[colIdx][rowIdx] = turn;
   winner = checkWin(colIdx, rowIdx);
   console.log(winner);
   turn = turn * -1;
-  //   gameStatus = getGameStatus()
   render();
 }
 function checkWin(colIdx, rowIdx) {
-  const player = board[colIdx][rowIdx];
-  return verWin(colIdx, rowIdx);
+  let winner = verWin(colIdx, rowIdx) || checkHorzWin(colIdx, rowIdx);
+  return winner;
 }
 
 function verWin(colIdx, rowIdx) {
   const player = board[colIdx][rowIdx];
   let count = 1;
-  let idx = colIdx + 1;
-  while (idx < board.length && board[idx][rowIdx] === player) {
+  rowIdx--;
+  while (rowIdx >= 0 && board[colIdx][rowIdx] === player) {
     count++;
-    idx++;
+    rowIdx--;
   }
-  return count >= 2 ? (winner = true) : null;
+  return count === 4 ? player : null;
 }
 
-// function gameStatus() {
+function checkHorzWin(colIdx, rowIdx) {
+  const player = board[colIdx][rowIdx];
+  let count = 1;
+  let column = colIdx - 1;
+
+  while (column >= 0 && board[column][rowIdx] === player) {
+    count++;
+    column--;
+  }
+
+  column = colIdx + 1;
+  while (column < board.length && board[colIdx][rowIdx] === player) {
+    count++;
+    column++;
+  }
+  return count === 4 ? player : null;
+}
