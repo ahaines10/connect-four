@@ -18,10 +18,7 @@ const msgEl = document.querySelector("h2");
 // boardEl.addEventListener("click", handleMove);
 buttonEls.addEventListener("click", handleMove);
 /*----- functions -----*/
-//if player clicks on row 1 player will have token of red
-//if player 2 click on row player 2 will have token of blue
-//players click in a array if player gets 4 in a row player wins
-//if player clicks 3 or less  player dosnt win;
+
 init();
 function init() {
   board = [
@@ -42,7 +39,7 @@ function init() {
 function render() {
   board.forEach(function (colArr, colIdx) {
     colArr.forEach(function (cellVal, rowIdx) {
-      //select the div for colidx and rowidx
+      
       let currPos = document.getElementById(`c${colIdx}r${rowIdx}`);
       currPos.style.backgroundColor = PLAYERS_COLORS[cellVal];
     });
@@ -102,12 +99,7 @@ function checkRightDg(colIdx, rowIdx) {
   let column = colIdx + 1;
   let row = rowIdx + 1;
 
-//   while (column < board.length && row > board[0].length && board[column][row] === player) {
-//     count++;
-//     column++;
-//     row++;
-//   }
-//   console.log(count, "taco");
+
 
   column = colIdx - 1;
   row = rowIdx - 1;
@@ -131,16 +123,8 @@ function checkLeftDg(colIdx, rowIdx) {
       row--; 
       console.log(row, column, "burrito");
     }
-    console.log(count, "taco");
-  
-    // column = colIdx - 1; extra
-    // row = rowIdx - 1;
-    // while (column >= 0 && row >= 0 && board[column][row] === player) {
-    //   count++;
-    //   column++;
-    //   row--;
-    // }
-    return count >= 4 ? player : null;
+    
+  return count >= 4 ? player : null;
   }
 function renderMessage() {
   if (winner === "T") {
