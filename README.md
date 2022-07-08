@@ -10,8 +10,8 @@
    </a>
 </div>
 
-<h1>:pencil: Description</h1>
-<p>Meet Your Classmates is an Instagram-clone and hub where students can get to know and relate to their peers via completion of short 3-question mini-surveys. By learning about others' backgrounds, previous experiences, and interests, an atmosphere of community is created that is conducive to higher levels of learning and success.</p>
+<h1>:volcano: Description</h1>
+<p>connect four is one of the best and most known games in the world. You start by dropping one coin into a board and your oppoinent drops a different color coin first one to reach four coins in a row wins.   </p>
 <details>
 <summary> :bar_chart: ERD</summary>
 

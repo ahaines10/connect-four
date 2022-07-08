@@ -38,6 +38,9 @@ body {
   border-radius: 50%;
   outline: 5px solid black;
 }
+#markers > div:hover {
+background-color: grey;
+}
 .button {
   text-align: center;
   justify-content: end;
