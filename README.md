@@ -13,7 +13,7 @@
 <h1>:volcano: Description</h1>
 <p>connect four is one of the best and most known games in the world. You start by dropping one coin into a board and your oppoinent drops a different color coin first one to reach four coins in a row wins.   </p>
 <details>
-<summary> :bar_chart: ERD</summary>
+
 
 | Description | Screenshot |
 |------------ | ------------|
