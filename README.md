@@ -56,7 +56,7 @@
 
 
 <details open>   
-<summary>Deployed Link (Heroku)</summary>
+<summary>Deployed Link (Connect Four)</summary>
 <a href="https://ahaines10.github.io/connect-four/">https://ahaines10.github.io/connect-four/</a>
 ## :fast_forward: Next Steps   
 
