@@ -38,3 +38,7 @@ body {
   border-radius: 50%;
   outline: 5px solid black;
 }
+.button {
+  text-align: center;
+  justify-content: end;
+}

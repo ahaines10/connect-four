@@ -13,6 +13,7 @@ let gameStatus;
 /*----- cached element references -----*/
 const boardEl = document.getElementById("board");
 const buttonEls = document.getElementById("markers");
+const msgEl = document.querySelector("h2");
 /*----- event listeners -----*/
 // boardEl.addEventListener("click", handleMove);
 buttonEls.addEventListener("click", handleMove);
@@ -46,11 +47,12 @@ function render() {
       currPos.style.backgroundColor = PLAYERS_COLORS[cellVal];
     });
   });
+  renderMessage();
 }
 
 function handleMove(evt) {
   if (evt.target.id === "markers" || winner) return;
-  let colIdx = evt.target.id[1];
+  let colIdx = parseInt(evt.target.id[1]);
   let rowIdx = board[colIdx].indexOf(0);
   board[colIdx][rowIdx] = turn;
   winner = checkWin(colIdx, rowIdx);
@@ -59,7 +61,9 @@ function handleMove(evt) {
   render();
 }
 function checkWin(colIdx, rowIdx) {
-  let winner = verWin(colIdx, rowIdx) || checkHorzWin(colIdx, rowIdx);
+  let winner = verWin(colIdx, rowIdx) || checkHorzWin(colIdx, rowIdx) ||
+  checkRightDg(colIdx, rowIdx)|| checkLeftDg(colIdx, rowIdx);
+  console.log(winner);
   return winner;
 }
 
@@ -85,9 +89,65 @@ function checkHorzWin(colIdx, rowIdx) {
   }
 
   column = colIdx + 1;
-  while (column < board.length && board[colIdx][rowIdx] === player) {
+  while (column < board.length && board[column][rowIdx] === player) {
     count++;
     column++;
   }
-  return count === 4 ? player : null;
+  return count >= 4 ? player : null;
+}
+
+function checkRightDg(colIdx, rowIdx) {
+  const player = board[colIdx][rowIdx];
+  let count = 1;
+  let column = colIdx + 1;
+  let row = rowIdx + 1;
+
+//   while (column < board.length && row > board[0].length && board[column][row] === player) {
+//     count++;
+//     column++;
+//     row++;
+//   }
+//   console.log(count, "taco");
+
+  column = colIdx - 1;
+  row = rowIdx - 1;
+  while (column >= 0 && row >= 0 && board[column][row] === player) {
+    count++;
+    column--;
+    row--;
+  }
+  console.log(count);
+  return count >= 4 ? player : null;
+}
+function checkLeftDg(colIdx, rowIdx) {
+    const player = board[colIdx][rowIdx];
+    let count = 0;
+    let column = colIdx;
+    let row = rowIdx;
+    console.log(row, column);
+    while (column < board.length && row >= 0 && board[column][row] === player) {
+      count++;
+      column++;
+      row--; 
+      console.log(row, column, "burrito");
+    }
+    console.log(count, "taco");
+  
+    // column = colIdx - 1; extra
+    // row = rowIdx - 1;
+    // while (column >= 0 && row >= 0 && board[column][row] === player) {
+    //   count++;
+    //   column++;
+    //   row--;
+    // }
+    return count >= 4 ? player : null;
+  }
+function renderMessage() {
+  if (winner === "T") {
+    msgEl.innerHTML = "its a tie";
+  } else if (winner === 1 || winner === -1) {
+    msgEl.innerHTML = `<span style = "color:${PLAYERS_COLORS[winner]}">${PLAYERS_COLORS[winner].toUpperCase()}</span> wins`;
+  } else {
+    msgEl.innerHTML = `Player <span style="color: ${PLAYERS_COLORS[turn]}">${PLAYERS_COLORS[turn].toUpperCase()}</span>'s Turn`;
+  }
 }

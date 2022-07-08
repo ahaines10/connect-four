@@ -1,0 +1,26 @@
+declare the apps state 
+your going to have a board 
+you have to have a winner 
+know whos turn it is
+whats the game status
+
+make sure all event listeners are cached
+you have to click a button so the token drops
+render messages
+
+male sure you initialize all of apps state 
+make sure to render all states
+
+board has to be a array
+if the player drops a token in the array if they get 4 in a row player wins
+if they dont get 4 in a row the game will continue untill player one 
+or player to gets 4 in a row 
+you can get 4 in a row horizontally,vertically or diagnol
+if player is less than 4 than no win if player is = to 4 
+player wins
+
+
+
+
+
+
