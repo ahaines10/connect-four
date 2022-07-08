@@ -12,13 +12,7 @@
 
 <h1>:volcano: Description</h1>
 <p>connect four is one of the best and most known games in the world. You start by dropping one coin into a board and your oppoinent drops a different color coin first one to reach four coins in a row wins.   </p>
-<details>
 
-
-| Description | Screenshot |
-|------------ | ------------|
-| <h3 align="center">ERD</h3> | <img src="https://``github.com/amarpan/meet-your-classmates/raw/main/public/Screenshots/ERD.MYC.png" width="700"> |
-</details>
 
 <details>
 <summary> :art: Wireframes</summary>
