@@ -37,8 +37,8 @@
 | <h3 align="center">horizontal win</h3> | <img src="https://i.imgur.com/OQBGhyb.png" width="700"/> |
 | <h3 align="center">vertical win</h3> | <img src="https://i.imgur.com/vTDnkcT.png" width="700"/> |
 </details>
-## :computer: Technologies Used
-[JavaScript](https://img.shields.io/badge/-JavaScript-333?style=flat&logo=javascript)
+:computer: Technologies Used
+![JavaScript](https://img.shields.io/badge/-JavaScript-333?style=flat&logo=javascript)
 ![HTML5](https://img.shields.io/badge/-HTML5-333?style=flat&logo=html5) 
 ![CSS3](https://img.shields.io/badge/-CSS-333?style=flat&logo=css3)
 ![Github](https://img.shields.io/badge/-GitHub-333?style=flat&logo=github)
