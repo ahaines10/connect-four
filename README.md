@@ -38,11 +38,13 @@
 | <h3 align="center">vertical win</h3> | <img src="https://i.imgur.com/vTDnkcT.png" width="700"/> |
 </details>
 <div align = center><h2>Technologies Used :computer:</h2></div>
+
 ![JavaScript](https://img.shields.io/badge/-JavaScript-333?style=flat&logo=javascript)
 ![HTML5](https://img.shields.io/badge/-HTML5-333?style=flat&logo=html5) 
 ![CSS3](https://img.shields.io/badge/-CSS-333?style=flat&logo=css3)
 ![Github](https://img.shields.io/badge/-GitHub-333?style=flat&logo=github)
 ![VSCode](https://img.shields.io/badge/-VS_Code-333?style=flat&logo=visualstudio)
+
 <h2> :atom_symbol: Getting Started </h2>
 
 <h3> :star_struck: How to play! </h3>
