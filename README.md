@@ -62,7 +62,7 @@
 
 ### Upcoming Features
 
-- [X] Add animation behind it   
+- [ ] Add animation behind it   
 
 - [ ] Add a computer to play against
 
