@@ -1,5 +1,5 @@
 <div align="center">
-   <h1>:school_satchel: :smileyface: CONNECT FOUR :school: :school_satchel: </h1>
+   <h1>:volcano: :volcano: CONNECT FOUR :controller: :school_satchel: </h1>
    <h3> https://ahaines10.github.io/connect-four/</h3>
    <h5>Alexander Haines</h5>                             
    <a href="https://www.linkedin.com/in/alexander-haines-9a9956238/" target="_blank">
