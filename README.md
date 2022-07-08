@@ -10,7 +10,7 @@
    </a>
 </div>
 
-<h1>:glasses: Description</h1>
+<h1>:: Description</h1>
 <p>connect four is one of the best and most known games in the world. You start by dropping one coin into a board and your oppoinent drops a different color coin first one to reach four coins in a row wins.   </p>
 
 
@@ -58,3 +58,13 @@
 <details open>   
 <summary>Deployed Link (Heroku)</summary>
 <a href="https://ahaines10.github.io/connect-four/">https://ahaines10.github.io/connect-four/</a>
+## :fast_forward: Next Steps   
+
+### Upcoming Features
+
+- [X] Add animation behind it   
+
+- [ ] Add a computer to play against
+
+- [ ] i want to let players pick there own color
+
