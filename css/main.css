@@ -39,7 +39,7 @@ body {
   outline: 5px solid black;
 }
 #markers > div:hover {
-background-color: grey;
+  background-color: grey;
 }
 .button {
   text-align: center;
