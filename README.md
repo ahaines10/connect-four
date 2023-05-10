@@ -67,10 +67,6 @@
 
 ### Development Instructions
 
-#### Prerequisites
-
-- [Install Node](https://nodejs.org/en/download)
-
 #### Start website
 
 clone repository onto your laptop
@@ -84,3 +80,5 @@ git clone https://github.com/ahaines10/connect-four.git
 ```bash
 cd connect-four
 ```
+
+copy absolute path to `index.html` file and open the file in the web browser
