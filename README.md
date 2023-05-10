@@ -13,28 +13,29 @@
 <h1>:: Description</h1>
 <p>connect four is one of the best and most known games in the world. You start by dropping one coin into a board and your oppoinent drops a different color coin first one to reach four coins in a row wins.   </p>
 
-
 <details>
 <summary> :art: Wireframes</summary>
 
-| Description | Screenshot |
-|------------ | ------------|
-| <h3 align="center">Start screen</h3> | <img src="https://i.imgur.com/9D30xAT.png" width="700"/>
-| <h3 align="center">Diagonal Win</h3> | <img src="https://i.imgur.com/AWAxMoE.png" width="700"> |
+| Description                          | Screenshot                                               |
+| ------------------------------------ | -------------------------------------------------------- |
+| <h3 align="center">Start screen</h3> | <img src="https://i.imgur.com/9D30xAT.png" width="700"/> |
+| <h3 align="center">Diagonal Win</h3> | <img src="https://i.imgur.com/AWAxMoE.png" width="700">  |
+
 </details>
 
 <details open>
 <summary> :gear: Functionality</summary>
 
-| Description | Screenshot |
-|------------ | ------------|
+| Description                            | Screenshot                                               |
+| -------------------------------------- | -------------------------------------------------------- |
 | <h3 align="center">horizontal win</h3> | <img src="https://i.imgur.com/OQBGhyb.png" width="700"/> |
-| <h3 align="center">vertical win</h3> | <img src="https://i.imgur.com/vTDnkcT.png" width="700"/> |
+| <h3 align="center">vertical win</h3>   | <img src="https://i.imgur.com/vTDnkcT.png" width="700"/> |
+
 </details>
 <div align = center><h2>Technologies Used :computer:</h2></div>
 
 ![JavaScript](https://img.shields.io/badge/-JavaScript-333?style=flat&logo=javascript)
-![HTML5](https://img.shields.io/badge/-HTML5-333?style=flat&logo=html5) 
+![HTML5](https://img.shields.io/badge/-HTML5-333?style=flat&logo=html5)
 ![CSS3](https://img.shields.io/badge/-CSS-333?style=flat&logo=css3)
 ![Github](https://img.shields.io/badge/-GitHub-333?style=flat&logo=github)
 ![VSCode](https://img.shields.io/badge/-VS_Code-333?style=flat&logo=visualstudio)
@@ -51,20 +52,35 @@
 </ol>
 </details>
 
-
-
-
-
 <details open>   
 <summary>Deployed Link (Connect Four)</summary>
 <a href="https://ahaines10.github.io/connect-four/">https://ahaines10.github.io/connect-four/</a>
-## :fast_forward: Next Steps   
+## :fast_forward: Next Steps
 
 ### Upcoming Features
 
-- [ ] Add animation behind it   
+- [ ] Add animation behind it
 
 - [ ] Add a computer to play against
 
 - [ ] i want to let players pick there own color
 
+### Development Instructions
+
+#### Prerequisites
+
+- [Install Node](https://nodejs.org/en/download)
+
+#### Start website
+
+clone repository onto your laptop
+
+```bash
+git clone https://github.com/ahaines10/connect-four.git
+```
+
+`cd` into the new repo
+
+```bash
+cd connect-four
+```

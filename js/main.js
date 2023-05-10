@@ -14,7 +14,7 @@ let gameStatus;
 const boardEl = document.getElementById("board");
 const buttonEls = document.getElementById("markers");
 const msgEl = document.querySelector("h2");
-const replay = document.querySelector("h3");
+const replay = document.querySelector("button");
 /*----- event listeners -----*/
 boardEl.addEventListener("click", handleMove);
 buttonEls.addEventListener("click", handleMove);
@@ -59,6 +59,10 @@ function handleMove(evt) {
   render();
 }
 function checkWin(colIdx, rowIdx) {
+  console.log("verticalwin", verWin(colIdx, rowIdx));
+  console.log("horizontalwin", checkHorzWin(colIdx, rowIdx));
+  console.log("rightdgwin", checkRightDg(colIdx, rowIdx));
+  console.log("leftdgwin", checkLeftDg(colIdx, rowIdx));
   let winner =
     verWin(colIdx, rowIdx) ||
     checkHorzWin(colIdx, rowIdx) ||
@@ -143,7 +147,7 @@ function renderMessage() {
   }
 }
 function renderReplay() {
-  if (evt.target.querySelector === "h3" || winner === null) {
+  if (evt.target.querySelector === "button" || winner === null) {
     replay.style.visibility = "hidden";
   } else {
     replay.style.visibility = "visible";
